@@ -1,4 +1,4 @@
-library <- c("tidyverse", "data.table", "hrbrthemes", "GGally", "factoextra", "mlr", "clue", "cowplot", "ggrepel", "ggforce", "here")
+library <- c("tidyverse", "data.table", "hrbrthemes", "GGally", "factoextra", "mlr", "clue", "cowplot", "ggrepel", "ggforce", "here", "")
 lapply(library, require, character.only = TRUE)
 
 ############################################################
@@ -67,7 +67,7 @@ box_outlier_graph <- gathered_data %>%
           y = "Fluorescence",
           colour = "Cluster")
 box_outlier_graph
-ggsave(here("results/graphs", "boxplot_outlier_removal.tiff"), dpi = 300, width = 16, height = 10)
+#ggsave(here("results/graphs", "boxplot_outlier_removal.tiff"), dpi = 300, width = 16, height = 10)
 
 ### PCA
 PCA_ready_data <- gathered_data %>%
@@ -222,7 +222,7 @@ cluster_task_two %>%
           y = "PC2 (eigenvalue)",
           colour = "Cluster")
 ggsave(here("results/graphs", "Kmeans_three_cluster.tiff"), dpi = 300, height = 10, width = 10)
-
+#clusters need reprinting. 27052022
 
 
 
